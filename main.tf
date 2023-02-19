@@ -1,6 +1,6 @@
 terraform {
   backend "gcs" {
-    bucket = "tf-bucket-157917"
+    bucket = "tf-bucket-XXXXX"
     prefix = "terraform/state"
   }
   required_providers {
@@ -30,8 +30,8 @@ module "vpc" {
   source  = "terraform-google-modules/network/google"
   version = "6.0.0"
 
-  project_id   = "qwiklabs-gcp-04-089d5f8d0233"
-  network_name = "tf-vpc-914390"
+  project_id   = "XXXXX"
+  network_name = "tf-vpc-XXXXX"
   routing_mode = "GLOBAL"
 
   subnets = [
@@ -50,7 +50,7 @@ module "vpc" {
 
 resource "google_compute_firewall" "tf-firewall" {
   name    = "tf-firewall"
-  network = "projects/qwiklabs-gcp-04-089d5f8d0233/global/networks/tf-vpc-914390"
+  network = "projects/XXXXX/global/networks/tf-vpc-XXXXX"
 
   allow {
     protocol = "tcp"
