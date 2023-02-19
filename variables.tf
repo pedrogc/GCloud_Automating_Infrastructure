@@ -10,6 +10,6 @@ variable "zone" {
 
 variable "project_id" {
   description = "project name"
-  default     = "qwiklabs-gcp-04-089d5f8d0233"
+  default     = "XXXXX"
 }
 
